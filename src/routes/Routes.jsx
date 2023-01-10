@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import AdminPortal from "../layouts/adminPortal/AdminPortal";
-import { adminRoutes } from "../layouts/adminPortal/AdminRoutes";
-import { growerRoutes } from "../layouts/growerPortal/GrowerRouter";
-import { userRoutes } from "../layouts/userPortal/UserRouter";
+import Broken from "../pages/broken/Broken";
+import { adminRoutes } from "../portals/admin/router.admin";
+import { userRoutes } from "../portals/user/router.user";
 
 export const routes = createBrowserRouter([
   {
@@ -14,15 +13,11 @@ export const routes = createBrowserRouter([
     children: userRoutes,
   },
   {
-    path: "/grower",
-    children: growerRoutes,
-  },
-  {
     path: "/admin",
     children: adminRoutes,
   },
   {
-    path: "/*",
-    element: <h2 className="text-5xl">Not Found</h2>,
+    path: "*",
+    element: <Broken />,
   },
 ]);
