@@ -4,7 +4,7 @@ export const routes = createBrowserRouter(
     [
         {
             path: "/",
-            element: <h2>Home</h2>
+            element: <h2 className="text-5xl">Home</h2>
         }
     ]
 )
